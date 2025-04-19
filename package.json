@@ -4,8 +4,15 @@
   "description": "fullstackopen part 3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"knismhang\""
+    "start": "node index.js",
+    "test": "echo \"knismhang\"",
+    "dev": "node --watch index.js"
   },
   "author": "mulain",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
 }
