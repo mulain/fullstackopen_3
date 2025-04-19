@@ -50,6 +50,7 @@ const logger = morgan(
 app.use(logger)
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
 
 // Routes
 
