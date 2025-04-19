@@ -1,0 +1,11 @@
+{
+  "name": "phonebook",
+  "version": "1.0.0",
+  "description": "fullstackopen part 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"knismhang\""
+  },
+  "author": "mulain",
+  "license": "ISC"
+}
