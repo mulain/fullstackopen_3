@@ -137,20 +137,23 @@ const unknownEndpoint = (req, res) => {
 
 app.use(unknownEndpoint)
 
-const errorHandler = (error, req, res) => {
+const errorHandler = (error, req, res, _next) => {
   console.error(error.message)
   if (error.context) {
     console.error(`Context: ${error.context}`)
   }
 
   if (error.name === 'CastError') {
-    return res.status(400).send({ error: 'malformatted id' })
+    console.log('CastError', error.message)
+    return res.status(400).json({ error: 'malformatted id' })
   }
 
   if (error.name === 'ValidationError') {
+    console.log('ValidationError', error.message)
     return res.status(400).json({ error: error.message })
   }
 
+  console.log('Internal server error', error)
   res.status(500).json({ error: 'Internal server error' })
 }
 

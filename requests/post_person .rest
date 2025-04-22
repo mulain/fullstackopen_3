@@ -5,3 +5,20 @@ Content-Type: application/json
   "name": "Linus Torrdfgtrvsdsdldsigk",
   "number": "123-456-78907"
 }
+### Render Valid
+POST https://fullstackopen-3-phonebook-back-end.onrender.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Linus Torrdfgtrvsdsdldsigk",
+  "number": "123-456-78907"
+}
+
+### Render Invalid
+POST https://fullstackopen-3-phonebook-back-end.onrender.com/api/persons
+Content-Type: application/json
+
+{
+  "name": "Li",
+  "number": "123-456-78907"
+}
