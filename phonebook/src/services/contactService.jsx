@@ -3,6 +3,7 @@ import axios from "axios"
 const api = axios.create({
     baseURL: import.meta.env.VITE_BACKEND_URL,
 })
+console.log("API base URL:", api.defaults.baseURL)
 
 const getAllContacts = () => {
     const request = api.get("persons")
